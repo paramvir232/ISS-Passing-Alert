@@ -56,13 +56,4 @@ while True:
             connection.login(user=my_google_email, password=google_password)
             connection.sendmail(from_addr=my_google_email, to_addrs=my_yahoo_email,
                                 msg=f'Subject:ISS ALERT !!\n\n LOOK UP ISS IS THERE !!')
-
-    # Testing code for sake of testing
-    else:
-        with smtplib.SMTP('smtp.gmail.com') as connection:
-            connection.starttls()
-            connection.login(user=my_google_email, password=google_password)
-            connection.sendmail(from_addr=my_google_email, to_addrs=my_yahoo_email,
-                                msg=f'Subject:ISS TEST ALERT !!\n\n NOT THIS TIME !!')
-
     time.sleep(60)
